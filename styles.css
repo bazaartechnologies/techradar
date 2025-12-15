@@ -83,6 +83,9 @@ body::before {
     padding: 40px 20px;
     position: relative;
     z-index: 1;
+    zoom: 0.75;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: 0 0;
 }
 
 header {
