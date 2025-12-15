@@ -10,7 +10,7 @@ class TechRadar {
         this.searchTerm = '';
 
         // Zoom and pan
-        this.scale = 0.75;
+        this.scale = 1;
         this.translateX = 0;
         this.translateY = 0;
         this.isDragging = false;
