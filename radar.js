@@ -46,7 +46,7 @@ class TechRadar {
     }
 
     loadTheme() {
-        const theme = localStorage.getItem('tech-radar-theme') || 'dark';
+        const theme = localStorage.getItem('tech-radar-theme') || 'light';
         if (theme === 'light') {
             document.body.classList.add('light-theme');
         }

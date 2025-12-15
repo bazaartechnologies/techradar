@@ -6,10 +6,34 @@
     "description": "Proceed with caution. Consider modern alternatives for new projects."
   },
   {
+    "name": "GraphQL",
+    "quadrant": 3,
+    "ring": 3,
+    "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools."
+  },
+  {
     "name": "Kotlin",
     "quadrant": 3,
     "ring": 0,
     "description": "Proven and recommended for Android and JVM development. Modern, concise, and fully interoperable with Java."
+  },
+  {
+    "name": "React",
+    "quadrant": 3,
+    "ring": 0,
+    "description": "React is a JavaScript library for building user interfaces. It is proven and recommended for building user interfaces."
+  },
+  {
+    "name": "Next.js",
+    "quadrant": 3,
+    "ring": 2,
+    "description": "Next.js is a React framework for building server-side rendered and static websites. It is proven and recommended for building websites."
+  },
+  {
+    "name": "KMP",
+    "quadrant": 3,
+    "ring": 0,
+    "description": "Kotlin Multiplatform is a Kotlin feature that allows you to share code between different platforms. It is proven and recommended for cross-platform development."
   },
   {
     "name": "Go (Golang)",
@@ -34,5 +58,90 @@
     "quadrant": 1,
     "ring": 2,
     "description": "Comprehensive security scanner for containers and other artifacts. Worth exploring for vulnerability detection in CI/CD pipelines."
+  },
+  {
+    "name": "Postgres",
+    "quadrant": 2,
+    "ring": 0,
+    "description": "Relational database management system. Proven and recommended for data storage and retrieval."
+  },
+  {
+    "name": "CNPG",
+    "quadrant": 2,
+    "ring": 3,
+    "description": "Cloud Native PostgreSQL. Proven and recommended for data storage and retrieval."
+  },
+  {
+    "name": "Document DB",
+    "quadrant": 2,
+    "ring": 3,
+    "description": "Document database management system. Proven and recommended for data storage and retrieval."
+  },
+  {
+    "name": "Avro Schema",
+    "quadrant": 3,
+    "ring": 0,
+    "description": "Avro Schema is a schema for Avro data. It is proven and recommended for data storage and retrieval."
+  },
+  {
+    "name": "Kafka",
+    "quadrant": 2,
+    "ring": 0,
+    "description": "Kafka is a distributed streaming platform. Proven and recommended for data streaming and processing."
+  },
+  {
+    "name": "Grpc",
+    "quadrant": 2,
+    "ring": 2,
+    "description": "Grpc is a high-performance, open-source RPC framework that enables efficient communication between services. Proven and recommended for microservices and cloud-native applications."
+  },
+  {
+    "name": "Grafana",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Grafana is an open-source analytics and monitoring platform that enables users to visualize and analyze metrics from various data sources. Proven and recommended for monitoring and analytics."
+  },
+  {
+    "name": "Extreme Programming",
+    "quadrant": 0,
+    "ring": 1,
+    "description": "Extreme Programming is a software development methodology that emphasizes continuous delivery, rapid feedback, and customer collaboration. Proven and recommended for software development."
+  },
+  {
+    "name": "Semantic Release",
+    "quadrant": 0,
+    "ring": 1,
+    "description": "Semantic Release is a tool that automates the release process. Proven and recommended for software development."
+  },
+  {
+    "name": "EKS",
+    "quadrant": 2,
+    "ring": 0,
+    "description": "EKS is a managed Kubernetes service that is proven and recommended for cloud-native applications."
+  },
+  {
+    "name": "Aws Lambda",
+    "quadrant": 2,
+    "ring": 3,
+    "description": "Aws Lambda is a serverless compute service that enables you to run code without provisioning or managing servers. Proven and recommended for cloud-native applications."
+  },
+  {
+    "name": "Teleport",
+    "quadrant": 1,
+    "ring": 3,
+    "description": "Teleport is a tool that enables you to manage your infrastructure and applications. Proven and recommended for infrastructure and application management."
+  },
+  {
+    "name": "Pengolin",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Pengolin is a tool that enables you to manage your infrastructure and applications. Proven and recommended for infrastructure and application management."
+  },
+  {
+    "name": "GrowthBook",
+    "quadrant": 2,
+    "ring": 1,
+    "description": "GrowthBook is a tool that enables you to manage your infrastructure and applications. Proven and recommended for infrastructure and application management."
   }
+
 ]
