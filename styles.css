@@ -279,22 +279,24 @@ kbd {
 }
 
 .controls {
-    margin-bottom: 40px;
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 #search {
     width: 100%;
     padding: 12px 20px;
-    background: var(--bg-card);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(139, 92, 246, 0.2);
     border-radius: 12px;
     font-size: 0.95rem;
     color: var(--text-primary);
     margin-top: 16px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow-sm);
 }
 
 #search::placeholder {
@@ -375,13 +377,13 @@ kbd {
     display: grid;
     grid-template-columns: 1fr 450px;
     gap: 40px;
-    background: var(--bg-card);
-    backdrop-filter: blur(20px);
-    padding: 40px;
-    border-radius: 24px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(139, 92, 246, 0.1);
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .radar-container {
@@ -389,7 +391,12 @@ kbd {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 20px;
+    padding: 40px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .radar-container::before {
@@ -710,8 +717,16 @@ kbd {
         width: 100%;
     }
 
-    .main-content {
+    .controls {
         padding: 20px;
+    }
+
+    .radar-container {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px 10px;
     }
 
     .keyboard-hints {
@@ -722,10 +737,6 @@ kbd {
     kbd {
         font-size: 0.75rem;
         padding: 3px 6px;
-    }
-
-    .container {
-        padding: 20px 10px;
     }
 }
 
