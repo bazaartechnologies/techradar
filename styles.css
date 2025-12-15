@@ -281,18 +281,21 @@ kbd {
 .controls {
     margin-bottom: 40px;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #search {
-    width: 100%;
-    padding: 16px 24px;
+    width: 280px;
+    padding: 12px 20px;
     background: var(--bg-card);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(139, 92, 246, 0.2);
-    border-radius: 16px;
-    font-size: 1rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
     color: var(--text-primary);
-    margin-bottom: 20px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shadow-sm);
 }
@@ -700,6 +703,15 @@ kbd {
 
     .subtitle {
         font-size: 1rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #search {
+        width: 100%;
     }
 
     .filters {
