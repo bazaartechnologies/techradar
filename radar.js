@@ -236,16 +236,6 @@ class TechRadar {
             this.toggleTheme();
         });
 
-        // Export button
-        document.getElementById('export-btn').addEventListener('click', () => {
-            this.exportSVG();
-        });
-
-        // Reset zoom button
-        document.getElementById('reset-zoom').addEventListener('click', () => {
-            this.resetZoom();
-        });
-
         // AI toggle
         document.getElementById('ai-toggle').addEventListener('change', () => {
             this.loadData();
