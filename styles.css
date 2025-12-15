@@ -381,6 +381,7 @@ kbd {
     grid-template-columns: 1fr 450px;
     gap: 40px;
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    align-items: start;
 }
 
 .left-section {
@@ -473,9 +474,16 @@ kbd {
 }
 
 .sidebar {
-    overflow-y: auto;
-    max-height: 800px;
-    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    height: 100%;
+    overflow: hidden;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -497,7 +505,8 @@ kbd {
 }
 
 .legend {
-    margin-bottom: 35px;
+    flex-shrink: 0;
+    margin-bottom: 25px;
     padding: 20px;
     background: rgba(139, 92, 246, 0.05);
     border-radius: 16px;
@@ -550,6 +559,7 @@ kbd {
 }
 
 .tech-details {
+    flex-shrink: 0;
     padding: 24px;
     background: rgba(139, 92, 246, 0.08);
     backdrop-filter: blur(10px);
@@ -600,8 +610,9 @@ kbd {
 }
 
 .tech-list {
-    max-height: 500px;
+    flex: 1;
     overflow-y: auto;
+    min-height: 0;
 }
 
 .tech-list::-webkit-scrollbar {
@@ -689,7 +700,11 @@ kbd {
     }
 
     .sidebar {
-        max-height: none;
+        height: auto;
+    }
+
+    .tech-list {
+        max-height: 500px;
     }
 
     h1 {
@@ -731,6 +746,10 @@ kbd {
     }
 
     .radar-container {
+        padding: 20px;
+    }
+
+    .sidebar {
         padding: 20px;
     }
 
