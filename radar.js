@@ -46,7 +46,7 @@ class TechRadar {
     }
 
     loadTheme() {
-        const theme = localStorage.getItem('tech-radar-theme') || 'light';
+        const theme = localStorage.getItem('tech-radar-theme') || 'dark';
         if (theme === 'light') {
             document.body.classList.add('light-theme');
         }
@@ -139,6 +139,11 @@ class TechRadar {
         document.getElementById('search').addEventListener('input', (e) => {
             this.searchTerm = e.target.value.toLowerCase();
             this.render();
+        });
+
+        // Match sidebar height on window resize
+        window.addEventListener('resize', () => {
+            this.matchSidebarHeight();
         });
 
         // Zoom with mouse wheel - DISABLED (fixed size radar)
@@ -255,6 +260,20 @@ class TechRadar {
         this.drawRadar();
         this.drawBlips();
         this.renderTechList();
+        this.matchSidebarHeight();
+    }
+
+    matchSidebarHeight() {
+        const controls = document.querySelector('.controls');
+        const radarContainer = document.querySelector('.radar-container');
+        const sidebar = document.querySelector('.sidebar');
+        if (controls && radarContainer && sidebar) {
+            const controlsHeight = controls.offsetHeight;
+            const radarHeight = radarContainer.offsetHeight;
+            const leftSectionGap = 30; // gap between controls and radar-container
+            const totalHeight = controlsHeight + radarHeight + leftSectionGap;
+            sidebar.style.height = `${totalHeight}px`;
+        }
     }
 
     drawRadar() {
@@ -576,5 +595,9 @@ class TechRadar {
 
 // Initialize radar when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new TechRadar();
+    const radar = new TechRadar();
+    // Match sidebar height after initial render
+    setTimeout(() => {
+        radar.matchSidebarHeight();
+    }, 100);
 });
