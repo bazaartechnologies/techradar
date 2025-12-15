@@ -141,13 +141,13 @@ class TechRadar {
             this.render();
         });
 
-        // Zoom with mouse wheel
-        this.svg.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            const delta = e.deltaY > 0 ? 0.9 : 1.1;
-            this.scale = Math.max(0.5, Math.min(3, this.scale * delta));
-            this.updateTransform();
-        });
+        // Zoom with mouse wheel - DISABLED (fixed size radar)
+        // this.svg.addEventListener('wheel', (e) => {
+        //     e.preventDefault();
+        //     const delta = e.deltaY > 0 ? 0.9 : 1.1;
+        //     this.scale = Math.max(0.5, Math.min(3, this.scale * delta));
+        //     this.updateTransform();
+        // });
 
         // Pan with drag
         this.svg.addEventListener('mousedown', (e) => {
@@ -207,20 +207,20 @@ class TechRadar {
             // Ignore if typing in search box
             if (e.target.tagName === 'INPUT') return;
 
-            // Reset zoom with 'r' or '0'
-            if (e.key === 'r' || e.key === 'R' || e.key === '0') {
-                this.resetZoom();
-            }
-            // Zoom in with '+'
-            if (e.key === '+' || e.key === '=') {
-                this.scale = Math.min(3, this.scale * 1.1);
-                this.updateTransform();
-            }
-            // Zoom out with '-'
-            if (e.key === '-' || e.key === '_') {
-                this.scale = Math.max(0.5, this.scale * 0.9);
-                this.updateTransform();
-            }
+            // Reset zoom with 'r' or '0' - DISABLED (fixed size radar)
+            // if (e.key === 'r' || e.key === 'R' || e.key === '0') {
+            //     this.resetZoom();
+            // }
+            // Zoom in with '+' - DISABLED (fixed size radar)
+            // if (e.key === '+' || e.key === '=') {
+            //     this.scale = Math.min(3, this.scale * 1.1);
+            //     this.updateTransform();
+            // }
+            // Zoom out with '-' - DISABLED (fixed size radar)
+            // if (e.key === '-' || e.key === '_') {
+            //     this.scale = Math.max(0.5, this.scale * 0.9);
+            //     this.updateTransform();
+            // }
             // Toggle theme with 't'
             if (e.key === 't' || e.key === 'T') {
                 this.toggleTheme();
