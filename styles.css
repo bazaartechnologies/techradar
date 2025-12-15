@@ -129,6 +129,10 @@ header {
     transform: translateY(0);
 }
 
+a.icon-btn {
+    text-decoration: none;
+}
+
 .moon-icon {
     display: none;
 }
