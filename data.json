@@ -24,6 +24,12 @@
     "description": "React is a JavaScript library for building user interfaces. It is proven and recommended for building user interfaces."
   },
   {
+    "name": "Spring Boot",
+    "quadrant": 3,
+    "ring": 0,
+    "description": "Spring Boot is a framework for building web applications. It is proven and recommended for building web applications."
+  },
+  {
     "name": "Next.js",
     "quadrant": 3,
     "ring": 2,
@@ -34,6 +40,12 @@
     "quadrant": 3,
     "ring": 0,
     "description": "Kotlin Multiplatform is a Kotlin feature that allows you to share code between different platforms. It is proven and recommended for cross-platform development."
+  },
+  {
+    "name": "Retrofit",
+    "quadrant": 1,
+    "ring": 3,
+    "description": "Retrofit is a type-safe HTTP client for Android and Java. It is proven and recommended for building HTTP clients."
   },
   {
     "name": "Go (Golang)",
@@ -76,6 +88,12 @@
     "quadrant": 2,
     "ring": 3,
     "description": "Document database management system. Proven and recommended for data storage and retrieval."
+  },
+  {
+    "name": "Mysql",
+    "quadrant": 2,
+    "ring": 3,
+    "description": "Mysql is a relational database management system. Proven and recommended for data storage and retrieval."
   },
   {
     "name": "Avro Schema",
