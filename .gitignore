@@ -1,0 +1,7 @@
+# Full AI data with sensitive internal information
+data.ai.full.json
+
+# Temporary/filtered data files
+data.filtered.json
+data.manual.json
+filtering_report.json

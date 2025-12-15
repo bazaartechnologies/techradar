@@ -1,0 +1,37 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Logs
+logs/*.log
+*.log
+
+# Progress checkpoints
+.scan_progress.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output (during testing)
+*.ai.json.test
+test_output/
+
+# Full AI data with sensitive internal information
+data.ai.full.json

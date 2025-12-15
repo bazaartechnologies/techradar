@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Java",
+    "quadrant": 3,
+    "ring": 3,
+    "description": "Proceed with caution. Consider modern alternatives for new projects."
+  },
+  {
+    "name": "Kotlin",
+    "quadrant": 3,
+    "ring": 0,
+    "description": "Proven and recommended for Android and JVM development. Modern, concise, and fully interoperable with Java."
+  },
+  {
+    "name": "Go (Golang)",
+    "quadrant": 3,
+    "ring": 2,
+    "description": "Fast, statically typed language designed for simplicity and efficiency. Worth exploring for microservices and cloud-native applications."
+  },
+  {
+    "name": "Terraform",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Infrastructure as Code tool. Industry standard for multi-cloud infrastructure management. Proven and recommended."
+  },
+  {
+    "name": "GitOps",
+    "quadrant": 0,
+    "ring": 0,
+    "description": "Git-based operational practices for infrastructure and application deployment. Proven approach for declarative infrastructure and continuous delivery."
+  },
+  {
+    "name": "Trivy",
+    "quadrant": 1,
+    "ring": 2,
+    "description": "Comprehensive security scanner for containers and other artifacts. Worth exploring for vulnerability detection in CI/CD pipelines."
+  }
+]

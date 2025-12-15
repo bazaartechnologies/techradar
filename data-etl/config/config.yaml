@@ -1,0 +1,194 @@
+github:
+  # Organizations to scan (replace with your organization name)
+  organizations:
+    - bazaartechnologies
+
+  # Repository limit (0 or omit for no limit)
+  # Useful for testing - e.g., scan only first 100 repos
+  repo_limit: 0  # 0 = scan all repos
+
+  # Repository filters
+  exclude_repos:
+    - "*-archived"
+    - "test-*"
+    - "legacy-*"
+
+  # Repository requirements
+  min_stars: 0
+  include_forks: false
+  include_archived: false
+  include_private: true
+
+openai:
+  # Model to use (gpt-4o-mini is recommended for cost/performance balance)
+  model: gpt-4o-mini
+
+  # Token limits
+  max_tokens: 1000
+  temperature: 0.3  # Lower = more consistent responses
+
+  # Retry configuration
+  max_retries: 3
+  timeout: 30
+
+# Technology Detection Configuration
+detection:
+  # Detection mode: legacy, ai, or hybrid
+  # - legacy: Uses hardcoded patterns (fast, limited)
+  # - ai: Uses AI-driven discovery (comprehensive, slower)
+  # - hybrid: AI first, fallback to legacy on error
+  mode: ai  # Change to "legacy" to use old detector
+
+  # AI Detection Settings (only used when mode = ai or hybrid)
+  ai_detection:
+    enabled: true
+    phase1_model: gpt-4o-mini  # Fast model for file triage
+    phase2_model: gpt-4o-mini  # Accurate model for analysis
+    max_files_per_repo: 6      # Max files to analyze per repo (reduced for speed)
+    max_file_size_kb: 50       # Skip files larger than this (reduced for speed)
+    file_tree_max_depth: 2     # How deep to scan directory tree (reduced for speed)
+    cache_results: true        # Cache AI results per repo
+
+# Technology Filtering Configuration
+filtering:
+  enabled: true  # Set to false to disable AI filtering
+
+  # Auto-ignore rules (no AI needed - fast filtering)
+  auto_ignore:
+    single_repo_technologies: true      # Remove technologies in only 1 repo
+    os_utilities: true                  # apt-get, brew, curl, wget
+    developer_conveniences: true        # rimraf, nodemon, npm-run-all
+
+  # AI-driven filtering
+  ai_filter:
+    enabled: true
+    model: gpt-4o-mini
+
+    # Strategic value thresholds
+    strategic_value:
+      include_if: ["high", "medium"]    # Keep technologies with these values
+      exclude_if: ["low"]                # Remove technologies with these values
+
+    # Duplicate handling
+    duplicate_detection:
+      enabled: true
+      merge_strategy: canonical_name    # Use most official/standard name
+
+    # Consolidation rules
+    consolidation:
+      enabled: true
+      merge_sub_features: true          # Firebase Crashlytics → Firebase
+      max_depth: 1                      # Only parent-child (1 level)
+
+    # Deprecation detection
+    deprecation:
+      enabled: true
+      flag_in_output: true              # Add "deprecated" field to output
+      suggest_alternatives: true        # AI suggests replacement
+
+  # Override rules (bypass auto-ignore)
+  overrides:
+    always_include_if_repos_gte: 5     # Always keep if used in 5+ repos
+    always_include_names:               # Never filter these (strategic)
+      - GraphQL
+      - gRPC
+      - Kubernetes
+      - Docker
+      - PostgreSQL
+      - MongoDB
+      - Redis
+      - Kafka
+
+classification:
+  # Usage-based thresholds (percentage of repos)
+  thresholds:
+    adopt: 0.70   # 70%+ of repos
+    trial: 0.40   # 40-70% of repos
+    assess: 0.10  # 10-40% of repos
+    # Below 10% = Hold
+
+  # Minimum repos for a tech to be included (default)
+  min_repos: 2
+
+  # Domain-aware minimum repos
+  # Infrastructure technologies are centralized (1 repo = mature)
+  # Application technologies are distributed (multiple repos = mature)
+  min_repos_by_domain:
+    infrastructure: 1  # Centralized: single infra repo is source of truth
+    data: 1           # Centralized: data pipelines often in one repo
+    backend: 2        # Distributed: microservices across repos
+    frontend: 2       # Distributed: multiple apps
+    mobile: 2         # Distributed: multiple apps
+    ml: 2             # Distributed: multiple models/projects
+    library: 2        # Distributed: used across projects
+    tooling: 2        # Distributed: various tools
+    unknown: 2        # Default for unknown domains
+
+  # Technology filters (exclude internal/proprietary tools)
+  exclude_patterns:
+    - "*-internal"
+    - "custom-*"
+    - "proprietary-*"
+
+output:
+  # Output file path (relative to data-etl directory)
+  file: ../data.ai.json
+
+  # Format: pretty (indented) or compact (minified)
+  format: pretty
+
+  # Include metadata (repos_count, usage_percentage, etc.)
+  include_metadata: true
+
+  # Sort entries by: usage, name, or ring
+  sort_by: usage
+
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: INFO
+
+  # Log file path
+  file: logs/scan.log
+
+  # Console output
+  console: true
+
+# Rate limiting (GitHub has strict limits)
+rate_limit:
+  # Max requests per minute (GitHub allows 5000/hour = ~83/min for core API)
+  # Set conservatively to avoid hitting limits
+  max_per_minute: 60  # Increased from 25 for faster scanning
+
+  # Safety threshold - pause if remaining requests < this
+  safety_threshold: 100
+
+# Progress tracking for resumability
+checkpoint:
+  enabled: true
+  file: .scan_progress.json
+  save_interval: 10  # Save after every N repos
+
+# Deep scanning for infrastructure repositories
+# Uses shallow clone + tree analysis to discover hidden technologies
+deep_scan:
+  # Enable deep scanning
+  enabled: true
+
+  # Repositories to deep scan (by name)
+  # These repos will be cloned and analyzed thoroughly
+  repositories:
+    - iac
+    - bazaar-kubernetes-artifacts
+
+  # Tree generation settings
+  tree:
+    max_depth: 6  # Maximum directory depth to scan
+    ignore_patterns:  # Directories/files to ignore
+      - '.git'
+      - 'node_modules'
+      - '.terraform'
+      - '__pycache__'
+      - '*.pyc'
+      - 'vendor'
+      - 'dist'
+      - 'build'
