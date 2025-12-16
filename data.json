@@ -160,6 +160,12 @@
     "quadrant": 2,
     "ring": 1,
     "description": "GrowthBook is a tool that enables you to manage your infrastructure and applications. Proven and recommended for infrastructure and application management."
+  },
+  {
+    "name": "WebSocket"
+    "quadrant": 2,
+    "ring": 2,
+    "description": "The WebSocket API makes it possible to open a two-way interactive communication session between the user's browser and a server."
   }
 
 ]
