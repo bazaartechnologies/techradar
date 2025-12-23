@@ -166,6 +166,11 @@
     "quadrant": 2,
     "ring": 2,
     "description": "The WebSocket API makes it possible to open a two-way interactive communication session between the user's browser and a server."
+  },
+  {
+    "name": "Python",
+    "quadrant": 3,
+    "ring": 0,
+    "description": "Versatile language for data science, ML, automation, and web development. Proven and recommended for wide range of applications."
   }
-
 ]
