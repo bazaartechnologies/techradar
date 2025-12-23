@@ -172,5 +172,11 @@
     "quadrant": 3,
     "ring": 0,
     "description": "Versatile language for data science, ML, automation, and web development. Proven and recommended for wide range of applications."
+  },
+  {
+    "name": "FastAPI",
+    "quadrant": 3,
+    "ring": 2,
+    "description": "FastAPI is a modern, fast (high-performance), web framework for building APIs with Python. Proven and recommended for building web APIs."
   }
 ]
