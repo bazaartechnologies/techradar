@@ -178,5 +178,11 @@
     "quadrant": 3,
     "ring": 2,
     "description": "FastAPI is a modern, fast (high-performance), web framework for building APIs with Python. Proven and recommended for building web APIs."
+  },
+  {
+    "name": "Apache Ranger",
+    "quadrant": 1,
+    "ring": 2,
+    "description": "Apache Ranger is a security feature for Data Security and Governance. Proven and recommended for securing data across different clusters."
   }
 ]
