@@ -66,12 +66,6 @@
     "description": "Git-based operational practices for infrastructure and application deployment. Proven approach for declarative infrastructure and continuous delivery."
   },
   {
-    "name": "Trivy",
-    "quadrant": 1,
-    "ring": 2,
-    "description": "Comprehensive security scanner for containers and other artifacts. Worth exploring for vulnerability detection in CI/CD pipelines."
-  },
-  {
     "name": "Postgres",
     "quadrant": 2,
     "ring": 0,
@@ -202,5 +196,60 @@
     "quadrant": 2,
     "ring": 0,
     "description": "Dependency-Track is an open-source Software Composition Analysis (SCA) platform that identifies and tracks vulnerabilities in third-party dependencies using SBOMs. Proven and recommended for managing supply chain risk and open-source dependency security."
-  }  
+  },
+  {
+    "name": "Trivy",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Comprehensive security scanner for containers, filesystems, IaC, and dependencies. Worth exploring for vulnerability detection in CI/CD pipelines."
+  },
+  {
+    "name": "Semgrep",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Static application security testing (SAST) tool for identifying code-level security issues using customizable rules. Worth exploring for secure code review and CI integration."
+  },
+  {
+    "name": "TruffleHog",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Secrets scanning tool that detects exposed credentials in source code, repositories, and CI logs. Worth exploring for preventing credential leakage."
+  },
+  {
+    "name": "Tailpipe",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Log ingestion and analysis tool designed for security telemetry processing and investigation workflows. Worth exploring for centralized security log analysis."
+  },
+  {
+    "name": "Dependabot",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Automated dependency monitoring and update tool that identifies vulnerable dependencies and creates remediation pull requests. Recommended for dependency hygiene and vulnerability management."
+  },
+  {
+    "name": "Prowler",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Cloud security posture assessment tool focused on AWS best practices and compliance checks. Worth exploring for cloud security posture visibility."
+  },
+  {
+    "name": "Kyverno",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Kubernetes-native policy engine for enforcing security, compliance, and governance controls using policy-as-code. Worth exploring for Kubernetes admission control and security enforcement."
+  },
+  {
+    "name": "Nuclei",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Template-based vulnerability scanning tool for detecting misconfigurations and known exposures. Worth exploring for lightweight and extensible DAST use cases."
+  },
+  {
+    "name": "Falco",
+    "quadrant": 1,
+    "ring": 0,
+    "description": "Runtime security and threat detection tool for containers and Kubernetes using behavioral rules. Recommended for detecting anomalous and malicious runtime activity."
+  }
+    
 ]
