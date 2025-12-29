@@ -187,19 +187,19 @@
   },
   {
     "name": "DefectDojo",
-    "quadrant": 1,
+    "quadrant": 2,
     "ring": 0,
     "description": "DefectDojo is an open-source vulnerability management platform that aggregates, normalizes, and tracks security findings from multiple tools across the SDLC. Proven and recommended for centralized vulnerability management and reporting."
   },
   {
     "name": "Wazuh",
-    "quadrant": 1,
+    "quadrant": 2,
     "ring": 0,
     "description": "Wazuh is an open-source SIEM and XDR platform that provides log analysis, intrusion detection, file integrity monitoring, and compliance monitoring. Proven and recommended for security monitoring, threat detection, and compliance use cases."
   },
   {
     "name": "Dependency-Track",
-    "quadrant": 1,
+    "quadrant": 2,
     "ring": 0,
     "description": "Dependency-Track is an open-source Software Composition Analysis (SCA) platform that identifies and tracks vulnerabilities in third-party dependencies using SBOMs. Proven and recommended for managing supply chain risk and open-source dependency security."
   }  
