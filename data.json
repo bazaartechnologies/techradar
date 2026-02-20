@@ -120,6 +120,18 @@
     "description": "Extreme Programming is a software development methodology that emphasizes continuous delivery, rapid feedback, and customer collaboration. Proven and recommended for software development."
   },
   {
+    "name": "Serverless",
+    "quadrant": 0,
+    "ring": 1,
+    "description": "A cloud-native execution model where infrastructure scales to zero and spins up on demand, eliminating idle resource costs and manual scaling concerns. Best suited for event-driven, short-lived, or bursty workloads where traditional always-on services are wasteful. Proven and recommended for eligible workflows."
+  },
+  {
+    "name": "Knative",
+    "quadrant": 2,
+    "ring": 1,
+    "description": "A CNCF-graduated serverless framework that runs on Kubernetes, providing scale-to-zero and event-driven workload capabilities without sacrificing observability or operational familiarity. At BazaarTech, Knative is our chosen serverless platform — it integrates naturally into our GitOps flow with ArgoCD, fits within our existing CI and deployment patterns, and provides Prometheus metrics and logs out of the box. Proven and recommended."
+  },
+  {
     "name": "Semantic Release",
     "quadrant": 0,
     "ring": 1,
